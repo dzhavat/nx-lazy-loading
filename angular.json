@@ -1,6 +1,7 @@
 {
   "version": 2,
   "projects": {
+    "dashboard": "libs/dashboard",
     "lazy-load": "apps/lazy-load",
     "lazy-load-e2e": "apps/lazy-load-e2e"
   }
