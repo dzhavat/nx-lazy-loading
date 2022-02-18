@@ -1,0 +1,28 @@
+{
+  "root": "apps/lazy-load-e2e",
+  "sourceRoot": "apps/lazy-load-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/lazy-load-e2e/cypress.json",
+        "devServerTarget": "lazy-load:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "lazy-load:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/lazy-load-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["lazy-load"]
+}

@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "lazy-load": "apps/lazy-load",
+    "lazy-load-e2e": "apps/lazy-load-e2e"
+  }
+}
