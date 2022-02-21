@@ -7,8 +7,6 @@ import { Route, RouterModule } from '@angular/router';
 })
 export class LazyLoadedTwoComponent {}
 
-export const lazyLoadedTwoPath = 'lazy-loaded-two';
-
 const route: Route = {
   path: '',
   component: LazyLoadedTwoComponent,
