@@ -5,12 +5,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { dashboardPath } from '@nx-lazy-load/dashboard';
 
 import { AppComponent } from './app.component';
-import { lazyLoadedTwoPath } from './lazy-loaded-two/lazy-loaded-two.component';
+import { lazyLoadedTwoPath } from './lazy-loaded-two';
 
 const routes: Routes = [
   {
-    // path: dashboardPath,
-    path: 'dashboard',
+    path: dashboardPath,
+    // path: 'dashboard',
     loadChildren: () =>
       import('@nx-lazy-load/dashboard').then((mod) => mod.DashboardModule),
   },
@@ -18,9 +18,7 @@ const routes: Routes = [
     path: lazyLoadedTwoPath,
     // path: 'lazy-loaded-two',
     loadChildren: () =>
-      import('./lazy-loaded-two/lazy-loaded-two.component').then(
-        (mod) => mod.LazyLoadedTwoModule
-      ),
+      import('./lazy-loaded-two').then((mod) => mod.LazyLoadedTwoModule),
   },
 ];
 
